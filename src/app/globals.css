@@ -122,7 +122,6 @@ body {
 
 body {
   color: var(--foreground);
-  user-select: none;
 }
 
 main[data-motion-ready="true"] section[data-slide-index] [data-reveal] {

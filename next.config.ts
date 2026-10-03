@@ -3,6 +3,7 @@ import Icons from "unplugin-icons/webpack";
 
 const nextConfig: NextConfig = {
   output: "export",
+  trailingSlash: true,
   allowedDevOrigins: ["172.23.168.73"],
   images: {
     unoptimized: true,

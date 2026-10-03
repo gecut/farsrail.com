@@ -38,10 +38,10 @@ export function Slide05({ copy }: Slide05Props) {
 
       <div className="relative z-20 h-full px-5 sm:px-6 pt-7 pb-6 flex flex-col">
         <div className="mx-auto w-full max-w-md text-center">
-          <h1 data-reveal="headline" data-stagger={0} className="text-primary text-3xl font-black uppercase tracking-wide leading-none">
+          <h2 data-reveal="headline" data-stagger={0} className="text-primary text-3xl font-black uppercase tracking-wide leading-none">
             <span className="text-white">{copy.heading.start} </span>
             <span className="text-secondary">{copy.heading.accent}</span>
-          </h1>
+          </h2>
           <p data-reveal="subhead" data-stagger={1} className="mt-1 text-[0.65rem] sm:text-[0.7rem] font-bold uppercase tracking-[0.2rem] text-white/70">
             {copy.heading.continued}
           </p>

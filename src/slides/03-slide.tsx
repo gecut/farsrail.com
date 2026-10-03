@@ -60,18 +60,18 @@ export function Slide03({ locale, brand, copy }: Slide03Props) {
           />
 
           <div className="flex flex-col">
-            <h1 className="text-primary text-xl sm:text-2xl font-bold uppercase tracking-[0.25rem] leading-tight">
+            <h2 className="text-primary text-xl sm:text-2xl font-bold uppercase tracking-[0.25rem] leading-tight">
               {brand.name}{" "}
               <span className="text-secondary">{brand.accent}</span>
-            </h1>
-            <h2
+            </h2>
+            <p
               className={cn(
                 "text-[0.625rem] sm:text-xs font-bold opacity-70 uppercase text-primary",
                 locale === "en" ? "tracking-[0.14rem]" : "tracking-[0.14rem]"
               )}
             >
               {brand.subtitle}
-            </h2>
+            </p>
           </div>
         </div>
 

@@ -46,10 +46,10 @@ export function Slide04({ copy }: Slide04Props) {
 
       <div className="relative z-20 h-full px-5 sm:px-6 pt-7 pb-6 flex flex-col">
         <div className="mx-auto w-full max-w-md text-center">
-          <h1 data-reveal="headline" data-stagger={0} className="text-primary text-3xl font-black uppercase tracking-wide leading-none">
+          <h2 data-reveal="headline" data-stagger={0} className="text-primary text-3xl font-black uppercase tracking-wide leading-none">
             <span className="text-white">{copy.heading.start} </span>
             <span className="text-secondary">{copy.heading.accent}</span>
-          </h1>
+          </h2>
 
           <LineBreak data-reveal="body" data-stagger={1} className="my-4" />
 

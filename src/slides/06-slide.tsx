@@ -128,7 +128,7 @@ export function Slide06({ copy }: Slide06Props) {
         </m.div>
 
         <div className="flex flex-col p-6">
-          <m.h1
+          <m.h2
             data-reveal="headline"
             data-stagger={0}
             className="font-black text-3xl flex flex-col uppercase ps-1"
@@ -143,16 +143,16 @@ export function Slide06({ copy }: Slide06Props) {
           >
             <span className="text-primary">{copy.heading.start}</span>
             <span className="text-secondary">{copy.heading.accent}</span>
-          </m.h1>
+          </m.h2>
 
           <LineBreak data-reveal="body" data-stagger={1} className="mt-4" />
 
           <div data-reveal="body" data-stagger={2} className="flex gap-2">
             <div className="flex-1 pt-4 pb-2 flex flex-col">
-              <h2 className="flex gap-1 text-sm uppercase items-center font-bold mb-2 tracking-tight text-primary">
+              <h3 className="flex gap-1 text-sm uppercase items-center font-bold mb-2 tracking-tight text-primary">
                 <LocationIcon className="size-8 text-secondary" />
                 <span>{copy.terminalsTitle}</span>
-              </h2>
+              </h3>
 
               {copy.terminals.map((terminal, index) => (
                 <div key={terminal} data-reveal="card" data-stagger={index}>
@@ -169,10 +169,10 @@ export function Slide06({ copy }: Slide06Props) {
             />
 
             <div className="flex-1 pt-4 pb-2 flex flex-col">
-              <h2 className="flex gap-1 text-sm uppercase items-center font-bold mb-2 tracking-tight text-primary">
+              <h3 className="flex gap-1 text-sm uppercase items-center font-bold mb-2 tracking-tight text-primary">
                 <GlobeIcon className="size-8 text-secondary" />
                 <span>{copy.destinationsTitle}</span>
-              </h2>
+              </h3>
 
               {copy.destinations.map((destination, index) => (
                 <div key={destination} data-reveal="card" data-stagger={index}>

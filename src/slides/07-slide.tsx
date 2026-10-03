@@ -27,9 +27,9 @@ function ContentItem(params: {
 
       <div className="flex flex-col gap-4">
         <div className="flex flex-col pe-4" key={params.data.title}>
-          <h2 className="font-bold text-sm opacity-80 text-secondary">
+          <h3 className="font-bold text-sm opacity-80 text-secondary">
             {params.data.title}
-          </h2>
+          </h3>
 
           {typeof params.data.content === "string" ? (
             <p className="text-white opacity-80">{params.data.content}</p>

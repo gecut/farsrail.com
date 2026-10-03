@@ -1,6 +1,7 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 
 function getLocaleFromPathname(pathname: string): "en" | "tr" {
@@ -28,27 +29,23 @@ function getTargetPathname(pathname: string, locale: "en" | "tr"): string {
 }
 
 export function InternationalizationToggleButton() {
-  const router = useRouter();
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
 
   const label = useMemo(() => (locale === "tr" ? "English" : "Türkçe"), [locale]);
   const icon = useMemo(() => (locale === "tr" ? "🇺🇲" : "🇹🇷"), [locale]);
+  const targetPath = getTargetPathname(pathname, locale);
+  const targetLocale = locale === "tr" ? "en" : "tr";
 
   return (
-    <button
-      type="button"
-      onClick={() => {
-        if (typeof window === "undefined") return;
-
-        const targetPath = getTargetPathname(pathname, locale);
-        const nextUrl = `${targetPath}${window.location.search}${window.location.hash}`;
-        router.push(nextUrl);
-      }}
+    <Link
+      href={targetPath}
+      hrefLang={targetLocale}
+      aria-label={`Switch to ${label}`}
       className="border flex items-center gap-1 border-primary fixed bottom-4 end-8 px-4 py-2 z-50 rounded-xl bg-background/70 backdrop-blur-2xl"
     >
       <span className="text-xs text-primary">{label}</span>
       <span className="text-lg">{icon}</span>
-    </button>
+    </Link>
   );
 }

@@ -57,26 +57,26 @@ export function Slide02({ locale, brand, copy }: Slide02Props) {
 
       <div className="flex flex-col my-auto w-min px-6">
         <div data-reveal="headline" data-stagger={0} className="flex flex-col">
-          <h1 className="text-primary text-3xl font-bold uppercase tracking-wider text-nowrap">
+          <h2 className="text-primary text-3xl font-bold uppercase tracking-wider text-nowrap">
             {brand.name} <span className="text-secondary">{brand.accent}</span>
-          </h1>
-          <h2
+          </h2>
+          <p
             className={cn(
               "text-xs font-bold opacity-70 uppercase text-primary text-nowrap",
               locale === "en" ? "tracking-[0.175rem]" : "tracking-wide"
             )}
           >
             {brand.subtitle}
-          </h2>
+          </p>
         </div>
 
         <LineBreak data-reveal="body" data-stagger={1} className="my-8" />
 
         <div className="flex flex-col">
-          <h1 data-reveal="headline" data-stagger={2} className="text-primary text-2xl font-bold uppercase tracking-wider">
+          <h2 data-reveal="headline" data-stagger={2} className="text-primary text-2xl font-bold uppercase tracking-wider">
             {copy.heading.start}{" "}
             <span className="text-secondary">{copy.heading.accent}</span>
-          </h1>
+          </h2>
 
           <div className="flex flex-col gap-4 mt-4">
             {copy.reasons.map((reason, index) => (
