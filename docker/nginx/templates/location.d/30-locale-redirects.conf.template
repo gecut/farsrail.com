@@ -7,7 +7,12 @@ location = /en/ {
   return 301 /;
 }
 
-# Unsupported locale prefixes are redirected to English root.
+# Canonical Turkish path with trailing slash.
+location = /tr {
+  return 301 /tr/;
+}
+
+# Unsupported 2-letter locale prefixes are redirected to English root.
 location ~ ^/(?!en(?:/|$)|tr(?:/|$))[a-z][a-z]/?$ {
   return 301 /;
 }
